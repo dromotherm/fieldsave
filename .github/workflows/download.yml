@@ -32,5 +32,10 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: get the zip...
       run: |
-        wget http://dromotherm.ddns.net/backup/download?apikey=9664269b8d334ec24d4b686998a8ec86
+        wget -O backup.tar.gz http://dromotherm.ddns.net/backup/download?apikey=9664269b8d334ec24d4b686998a8ec86
         ls -al
+    - name: Upload the zip as artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: figures
+        path: backup.tar.gz
