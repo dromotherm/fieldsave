@@ -33,4 +33,5 @@ jobs:
     - name: get the zip...
       run: |
         python download.py
+        wget http://dromotherm.ddns.net/backup/download?apikey=9664269b8d334ec24d4b686998a8ec86
         ls -al
