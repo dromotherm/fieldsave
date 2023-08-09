@@ -20,7 +20,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: get the zip...
       run: |
-        wget -O backup.tar.gz http://dromotherm.ddns.net/backup/download?apikey=${{ vars.RWKEY }}
+        wget -O backup.tar.gz http://dromotherm.ddns.net/backup/download?apikey=${{ secrets.RWKEY }}
         ls -al
     - name: Upload the zip as artifact
       uses: actions/upload-artifact@v1
