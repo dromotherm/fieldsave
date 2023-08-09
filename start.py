@@ -1,12 +1,9 @@
 from contextlib import closing
 from urllib.request import urlopen
-import argparse
-
-parser = argparse.ArgumentParser()
-parser.add_argument("--key", action="store")
-p_args = parser.parse_args()
+import os
+APIKEY=os.environ('RWKEY')
 
 print("starting emonpi backup")
-url = "http://dromotherm.ddns.net/backup/start?apikey=p_args.key"
+url = "http://dromotherm.ddns.net/backup/start?apikey=APIKEY"
 with closing(urlopen(url)) :
     pass
