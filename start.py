@@ -1,7 +1,7 @@
 from contextlib import closing
 from urllib.request import urlopen
 import os
-APIKEY=os.environ['RWKEY']
+APIKEY=os.environ.get("RWKEY")
 print(APIKEY)
 
 print("starting emonpi backup")
