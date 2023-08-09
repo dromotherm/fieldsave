@@ -16,6 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: get the zip...
+    - name: testing the env var
       run: |
-        echo "$RWKEY"
+        echo ${{ vars.RWKEY }}
