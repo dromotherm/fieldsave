@@ -27,5 +27,5 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: backup start....
       run: |
-        python start.py --key=${{ secrets.RWKEY }}
+        python start.py
         ls -al
