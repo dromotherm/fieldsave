@@ -22,7 +22,7 @@ jobs:
         wget -O backup.tar.gz http://dromotherm.ddns.net/backup/download?apikey=${{ secrets.RWKEY }}
         ls -al
     - name: Upload the zip as artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: dromotherm_backup
         path: backup.tar.gz
