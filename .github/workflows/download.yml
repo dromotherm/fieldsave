@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: get the zip...
       run: |
         wget -O backup.tar.gz http://dromotherm.ddns.net/backup/download?apikey=${{ secrets.RWKEY }}
